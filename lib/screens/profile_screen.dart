@@ -3,7 +3,8 @@ import '../models/user_model.dart';
 import '../utils/app_colors.dart';
 
 class ProfileScreen extends StatelessWidget {
-  final UserModel user = UserModel.sample;
+  // Mengubah menjadi static agar kompatibel dengan konstruktor const
+  static final UserModel user = UserModel.sample;
   
   const ProfileScreen({super.key});
   
@@ -14,7 +15,6 @@ class ProfileScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('Profile', style: TextStyle(color: Colors.white)),
         backgroundColor: AppColors.primaryPurple,
-        
       ),
       body: SingleChildScrollView(
         padding: EdgeInsets.all(20),
@@ -90,7 +90,7 @@ class ProfileScreen extends StatelessWidget {
             ),
             const SizedBox(height: 10),
             Column(
-              children: user.socialLinks.map((link) => 
+              children: user.socialLinks.map((link) =>
                 ListTile(
                   leading: Icon(
                     _getIconForSocialLink(link),
@@ -108,13 +108,13 @@ class ProfileScreen extends StatelessWidget {
       ),
     );
   }
-  
+
   IconData _getIconForSocialLink(String link) {
     switch (link.toLowerCase()) {
       case 'linkedin':
-        return Icons.linkedin;
+        return Icons.link;
       case 'twitter':
-        return Icons.twitter;
+        return Icons.link;
       case 'github':
         return Icons.code;
       default:

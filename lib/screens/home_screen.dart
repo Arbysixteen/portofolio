@@ -3,7 +3,8 @@ import '../models/user_model.dart';
 import '../utils/app_colors.dart';
 
 class HomeScreen extends StatelessWidget {
-  final UserModel user = UserModel.sample;
+  // Tambahkan modifier static pada user
+  static final UserModel user = UserModel.sample;
   
   const HomeScreen({super.key});
   
