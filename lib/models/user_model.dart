@@ -17,10 +17,10 @@ class UserModel {
 
   // Sample user data
   static UserModel get sample => UserModel(
-    name: 'Amy Awesome',
-    title: 'Director of Marketing',
-    email: 'amy@buzzystudios.com',
-    phone: '+1 (415) 555 - 1010',
+    name: 'Arbi Sixteen',
+    title: 'SUPERVISOR PROJECT',
+    email: 'arbychristian19@gmail.com',
+    phone: '+62 811 582 7700',
     description: 'I lead the growth team at a top marketing studio. Email me if you want to discuss growth traffic.',
     socialLinks: [
       'LinkedIn',
